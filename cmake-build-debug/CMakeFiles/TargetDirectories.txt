@@ -1,0 +1,3 @@
+C:/Users/namku/CLionProjects/MangVs Contro/cmake-build-debug/CMakeFiles/MangVs_Contro.dir
+C:/Users/namku/CLionProjects/MangVs Contro/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/namku/CLionProjects/MangVs Contro/cmake-build-debug/CMakeFiles/rebuild_cache.dir
