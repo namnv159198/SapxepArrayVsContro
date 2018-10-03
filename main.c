@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <malloc.h>
 
 void Hoanvi(int *a, int *b) {
     int temp = *a;
@@ -37,14 +38,26 @@ void InvaXuatmangtangdan() {
 
 }
 
-int main(){
-    int a=10 ;
-    int *point; // Khai bao bien con tro ten la point va co the tro den cac bien so nguyen (integer)(int)
-    point = &a;// gan dia chi bien a cho con tro
-    printf("Gia tri cua a la : %d\n",a); // in ra gia tri cua bien a
-    printf("Dia chi cua a la : %d\n",&a);//in dia chi bien a
-    printf("Gia tri cua con tro la: %d\n",*point); // in gia tri cua con tro
-    printf("Dia chi cua con tro la: %d\n",point);//in dia chi cua con tro
-
-
+int main() {
+//    int a=10 ;
+//    int *point; // Khai bao bien con tro ten la point va co the tro den cac bien so nguyen (integer)(int)
+//    point = &a;// gan dia chi bien a cho con tro
+//    printf("Gia tri cua a la : %d\n",a); // in ra gia tri cua bien a
+//    printf("Dia chi cua a la : %d\n",&a);//in dia chi bien a
+//    printf("Gia tri cua con tro la: %d\n",*point); // in gia tri cua con tro
+//    printf("Dia chi cua con tro la: %d\n",point);//in dia chi cua con tro
+    int size = 5;
+    int *poiter = malloc(5 * sizeof(int));// cap phat o nho cho con tro, o nho nay chua size la 5 va chua bien int
+    // int *poiter = malloc(5) van chay binh thuong, cap phat 5 o nho.
+    int *startPoint = poiter;
+    for (int i = 0; i < size; ++i) {
+        printf("Nhap phan tu thu %d = ", i + 1);
+        scanf("%d", poiter);
+        poiter++;
+    }
+    poiter = startPoint;
+    for (int i = 0; i < size; ++i) {
+        printf("%d ", *poiter);
+        poiter++;
+    }
 }
